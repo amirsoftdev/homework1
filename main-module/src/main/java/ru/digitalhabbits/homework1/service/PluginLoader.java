@@ -28,7 +28,6 @@ public class PluginLoader {
         ArrayList<String> classList = new ArrayList<>();
         ArrayList<URL> urlList = new ArrayList<>();
 
-
         File pluginDirectory = new File(pluginDirName);
         File[] files = pluginDirectory.listFiles((dir, name) -> name.endsWith(PLUGIN_EXT));
 
@@ -63,15 +62,11 @@ public class PluginLoader {
                             e.printStackTrace();
                         }
                     });
-
                 } catch (MalformedURLException e) {
                     e.printStackTrace();
                 }
-
             }
         }
-
         return plugins;
-
     }
 }

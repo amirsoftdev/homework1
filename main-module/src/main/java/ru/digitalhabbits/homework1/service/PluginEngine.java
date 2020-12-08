@@ -1,7 +1,6 @@
 package ru.digitalhabbits.homework1.service;
 
 import ru.digitalhabbits.homework1.plugin.PluginInterface;
-
 import javax.annotation.Nonnull;
 import java.lang.reflect.InvocationTargetException;
 import java.lang.reflect.Method;
@@ -14,7 +13,6 @@ public class PluginEngine {
         String result = "";
 
         try {
-
             Method clsMethod = cls.getMethod("apply", String.class);
             PluginInterface plugin = cls.getConstructor().newInstance();
             result = (String) clsMethod.invoke(plugin, text);
@@ -24,7 +22,6 @@ public class PluginEngine {
 
             e.printStackTrace();
         }
-
         return result;
     }
 }

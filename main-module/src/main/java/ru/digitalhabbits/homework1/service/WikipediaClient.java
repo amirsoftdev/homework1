@@ -36,7 +36,6 @@ public class WikipediaClient {
         } catch (IOException e) {
             e.printStackTrace();
         }
-
         return extractText(json);
     }
 

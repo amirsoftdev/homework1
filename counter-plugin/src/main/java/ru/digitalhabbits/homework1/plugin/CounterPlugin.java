@@ -9,7 +9,6 @@ public class CounterPlugin implements PluginInterface {
 
     private final Pattern pattern = Pattern.compile("(\\b[a-zA-Z][a-zA-Z.0-9]*\\b)");
 
-
     @Nullable
     @Override
     public String apply(@Nonnull String text) {
@@ -26,8 +25,6 @@ public class CounterPlugin implements PluginInterface {
         while (matcher.find()) {
             wordsCount++;
         }
-
         return lineLength + ";" + wordsCount + ";" + lettersLength;
-
     }
 }
