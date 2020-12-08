@@ -8,6 +8,7 @@ import ru.digitalhabbits.homework1.service.PluginLoader;
 import ru.digitalhabbits.homework1.service.WikipediaClient;
 
 import javax.annotation.Nonnull;
+import java.io.IOException;
 import java.util.List;
 
 import static org.slf4j.LoggerFactory.getLogger;
@@ -17,7 +18,7 @@ public class WikipediaSearchEngine {
 
     private static final String PLUGIN_DIR = "plugins";
 
-    public void search(@Nonnull String searchString) {
+    public void search(@Nonnull String searchString) throws IOException {
         logger.info("Searching '{}' on wikipedia", searchString);
 
         // 1. сделать запрос в wikipedia, получить результат в формате json.

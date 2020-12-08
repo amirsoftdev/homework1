@@ -1,10 +1,11 @@
 package ru.digitalhabbits.homework1;
 
 import javax.annotation.Nonnull;
+import java.io.IOException;
 import java.util.Scanner;
 
 public class Homework {
-    public static void main(String[] args) {
+    public static void main(String[] args) throws IOException {
         new WikipediaSearchEngine().search(getSearchString(args));
     }
 

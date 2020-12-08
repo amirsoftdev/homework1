@@ -3,6 +3,7 @@ package ru.digitalhabbits.homework1.service;
 import org.junit.jupiter.api.Test;
 import ru.digitalhabbits.homework1.plugin.PluginInterface;
 
+import java.io.IOException;
 import java.util.List;
 
 import static org.junit.jupiter.api.Assertions.*;
@@ -13,7 +14,7 @@ class PluginLoaderTest {
     private final PluginLoader loader = new PluginLoader();
 
     @Test
-    void loadPlugins() {
+    void loadPlugins() throws IOException {
         final List<Class<? extends PluginInterface>> classes =
                 loader.loadPlugins(PLUGIN_DIR);
         assertEquals(1, classes.size());
